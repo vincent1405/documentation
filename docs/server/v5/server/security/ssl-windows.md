@@ -7,12 +7,12 @@ Follow this guide to add a self-signed certificate to EventStoreDB.
 First, create a certificate using PowerShell, and copy the thumbprint from the output:
 
 ```powershell
-New-SelfSignedCertificate -DnsName eventstore.org, localhost -CertStoreLocation cert:\CurrentUser\My
+New-SelfSignedCertificate -DnsName eventstore.com, localhost -CertStoreLocation cert:\CurrentUser\My
 ```
 
 The `cert:\CurrentUser\My` certificate location contains values to be used for `CertificateStoreLocation` (`CurrentUser`) and `CertificateStoreName` (`My`) settings.
 
-The `eventstore.org` value should be used for the `CertificateSubjectName` setting, and `localhost` is the default value for the `SslTargetHost` setting.
+The `eventstore.com` value should be used for the `CertificateSubjectName` setting, and `localhost` is the default value for the `SslTargetHost` setting.
 
 ## Trust the certificate
 
